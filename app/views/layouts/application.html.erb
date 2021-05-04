@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/b14cc21095.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <% flash.each do |type, message| %>
       <p class="alert <%= flash_class(type) %>"><%= message %></p>
     <% end %>
-    <%= yield %>
+     <nav class="navbar bg-info ">
+          <%= link_to "Twitter", root_path, class: "text-white nav-link nav-item text-decoration-none me-auto fs-1" %>
+          <%= link_to "Add a tweet", new_tweet_path, class: "btn btn-primary text-decoration-none ms-auto me-3" %>
+          <%= link_to "Sign Up", root_path, class: "btn btn-success text-decoration-none mx-4" %>
+      </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
