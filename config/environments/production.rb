@@ -74,6 +74,7 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
+  # config.serve_static_files = true
 
   # Log disallowed deprecations.
   config.active_support.disallowed_deprecation = :log
