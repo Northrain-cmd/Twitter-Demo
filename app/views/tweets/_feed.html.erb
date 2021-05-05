@@ -7,8 +7,8 @@
           </div>
           <div class="col-md-9">
             <div class="card-body">
-              <strong class="card-text">Author</strong><br>
-              <small class="card-text">@username</small>
+              <strong class="card-text"><%= tweet.user.name %></strong><br>
+              <small class="card-text">@<%= tweet.user.username %></small>
               <p class="card-text"><%= tweet.tweet %></p>
               <p class="card-text"><small class="text-muted"><%= tweet.created_at.strftime("%H:%M %d/%m/%y") %></small></p>
               <div class="controls">

@@ -12,12 +12,12 @@
 
   <body>
     <% flash.each do |type, message| %>
-      <p class="alert <%= flash_class(type) %>"><%= message %></p>
+      <p class="alert mb-0 <%= flash_class(type) %>"><%= message %></p>
     <% end %>
      <nav class="navbar bg-info ">
           <%= link_to "Twitter", root_path, class: "text-white nav-link nav-item text-decoration-none me-auto fs-1" %>
           <%= link_to "Add a tweet", new_tweet_path, class: "btn btn-primary text-decoration-none ms-auto me-3" %>
-          <%= link_to "Sign Up", root_path, class: "btn btn-success text-decoration-none mx-4" %>
+          <%= link_to "Sign Up", "users/sign_up", class: "btn btn-success text-decoration-none mx-4" %>
       </nav>
     <div class="container">
       <%= yield %>

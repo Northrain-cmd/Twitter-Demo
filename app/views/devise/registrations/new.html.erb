@@ -4,6 +4,10 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :name,
+                required: true %>
+    <%= f.input :username,
+                required: true %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -17,9 +21,14 @@
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="form-actions mt-3">
+    <%= f.button :submit, "Sign up", class: "btn btn-success" %>
+    <br>
+    <span>or</span>
+    <br>
+    <%= render "devise/shared/links" %>
   </div>
 <% end %>
+   
+  <br>
 
-<%= render "devise/shared/links" %>
