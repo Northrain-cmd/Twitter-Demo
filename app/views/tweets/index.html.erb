@@ -1,9 +1,15 @@
 <div class="row">
-  <div class="col-3">
-    <%= render partial: "trends" %>
+  <div class="col-4">
+    <% if user_signed_in? %>
+      <%= render partial: "profile" %>
+    <% else %>
+       <%= render partial: "trends" %>
+    <% end %>
   </div>
-  <div class="col-6">
-    <%= render "tweets/form", tweet: @tweet %>
+  <div class="col-5">
+    <% if user_signed_in? %>
+       <%= render "tweets/form", tweet: @tweet %>
+    <% end %>
     <%= render partial: "feed", locals: { tweets: @tweets } %>
   </div>
   <div class="col-3">

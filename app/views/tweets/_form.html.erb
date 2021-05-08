@@ -3,7 +3,7 @@
     <%= f.error_notification %>
     <div class="form-group">
       <%= f.input :tweet, label: "Tweet about it", input_html: { class: "form-control", cols: 1, rows: 4 },
-          placeholder: "Write a new tweet..." %>
+          placeholder: "Write a new tweet...", autofocus: true %>
     </div>
     <%= f.button :submit, class: "rounded-0 border-0 btn btn-primary w-100" %>
     <% end %>

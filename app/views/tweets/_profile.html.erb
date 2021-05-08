@@ -1,0 +1,53 @@
+<section>
+  <div class="follow border bg-secondary mt-3">
+    <div class="card rounded-0 border-0 text-muted mx-auto" style="max-width: 540px; background-color:whitesmoke">
+        <div class="row g-0 d-flex align-items-center">
+          <div class="col-md-10">
+            <div class="card-body py-0">
+              <strong class="card-text fs-5">Profile</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="card border-0 mx-auto my-0" style="max-width: 540px;">
+        <div class="row g-0 d-flex align-items-center">
+          <div class="col-md-2 d-flex justify-content-center">
+            <img class="rounded-circle" src="https://via.placeholder.com/40" alt="User Avatar">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <strong class="card-text"><%= current_user.name %></strong> <br>
+              <small class="text-muted"><%= "@" + current_user.username %></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="card border-0 px-4  mx-auto container-fluid" style="max-width: 540px;">
+        <div class="row">
+          <div class="col-12 px-0 card-body row">
+            <div class="text-center card-text col-4">
+              <p>
+                <small class="text-muted">Tweets</small>
+                <br>
+                <strong><%= current_user.tweets.count %></strong>
+              </p>
+            </div>
+            <div class="text-center col-4">
+              <p>
+              <small class="text-muted">Following</small>
+              <br>
+              <strong><%= 315 %></strong>
+              </p>
+            </div>
+            <div class="text-center col-4">
+              <p>
+                <small class="text-muted">Followers</small>
+                <br>
+                <strong><%= "114K" %></strong>
+              </p>
+            </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</section>

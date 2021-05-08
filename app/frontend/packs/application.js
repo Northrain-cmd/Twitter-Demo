@@ -12,3 +12,9 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 import "../stylesheets/application"
+setTimeout(removeFlashMessages, 3000);
+
+function removeFlashMessages() {
+  const notifications = document.querySelector(".notifications");
+  notifications.innerHTML = ""
+}
